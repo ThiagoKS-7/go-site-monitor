@@ -53,3 +53,9 @@
 		)
 		fmt.Scanf("%d", &op) //scanf igualzinho ao c
 	}
+#MÓDULOS
+ - Na pasta raiz, dar um go module init workspace;
+ -Quando precisar importar, dar um: 
+ 	import nome "workspace/pasta"
+ -Na hora de chamar o arquivo importado, usar o nome dado.NomeDaFuncIniciandoComLetraMaiscula
+
