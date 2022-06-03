@@ -1,7 +1,7 @@
 package main
 
 import (
-	run "workspace/pkg"
+	run "workspace/pkg/menu"
 )
 
 /*
