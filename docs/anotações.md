@@ -11,6 +11,7 @@
 	Se declara o tipo depois do nome da variavel
 	No go as variáveis não vem com lixo, vem zerada (AEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE)
 	Não deixa rodar com variáveis não usadas
+	LISTA RETORNA STRING VAZIA NAS POSIÇÕES NÃO USADAS
 	fmt - BIBLIOTECA DE PRINT
 
 #INFERÊNCIA E TIPOS
@@ -58,4 +59,8 @@
  -Quando precisar importar, dar um: 
  	import nome "workspace/pasta"
  -Na hora de chamar o arquivo importado, usar o nome dado.NomeDaFuncIniciandoComLetraMaiscula
+
+ #SLICE 
+	basicamente oq eu tinha usado (SÓ Q ELE NÃO OBRIGA PASSAR O TAMANHO): nomes := []string {1,2,3,4,5}
+	Quando é necessário colocar mais elementos do que sua capacidade atual, o slice dobra a capacidade.
 

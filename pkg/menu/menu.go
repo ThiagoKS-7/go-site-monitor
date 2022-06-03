@@ -4,9 +4,10 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"time"
 )
 
-// EXIBE O MENU E RETORNA A OPÇAÕ ESCOLHIDA
+/* EXIBE O MENU E RETORNA A OPÇÃO ESCOLHIDA */
 func ShowMenu() {
 
 	opcao := -1
@@ -24,13 +25,14 @@ func ShowMenu() {
 	}
 }
 
+/* RETORNA A OPÇÃO DIGITADA PELO USUÁRIO */
 func ReadComand(opcao int) int {
 	fmt.Print("\nDigite uma opção: ")
 	fmt.Scan(&opcao) // só vai aceitar o tipo da variável - retorna 0 
 	return opcao
 }
 
-// SWITCH RESPONSÁVEL POR TRATAR A OPÇÃO ESCOLHIDA NO MENU
+/* SWITCH RESPONSÁVEL POR TRATAR A OPÇÃO ESCOLHIDA NO MENU */
 func ChoseOption(opcao int) {
 	switch opcao {
 		case 0:
@@ -45,16 +47,24 @@ func ChoseOption(opcao int) {
 	}
 }
 
-/*Faz uma requisição http pra cada site, conferindo se retorna 200*/
+/*  FAZ UMA REQUISIÇÃO HTTP PARA CADA SITE
+	JOGANDO A RESP E O POSSIVEL ERRO NA handleRequest.
+	SE TIVER RES, FAZ O MONITORAMENTO
+*/ 
 func initMonitoring() {
 	fmt.Println("\nMonitorando...")
-	for _, i := range sites {
-		res, err := http.Get(i)
-		res = handleRequest(res,err)
-		doMonitoring(res) 
+	for i := 0; i < monitoramentos; i++ {
+		for _, i := range sites {
+			res, err := http.Get(i)
+			res = handleRequest(res,err)
+			doMonitoring(res) 
+		}
+		time.Sleep(delay * time.Second)
+		fmt.Println("")
 	}
 }
 
+/*  VALIDA SE A ROTA NÃO RETORNOU ERRO */ 
 func handleRequest(res *http.Response,err error) *http.Response {
 	//Equivalência de try catch
 	if err != nil {
@@ -64,20 +74,27 @@ func handleRequest(res *http.Response,err error) *http.Response {
 	return res
 }
 
+/*  MOSTRA A URL E O STATUS DE CADA SITE MONITORADO */ 
 func doMonitoring(res *http.Response) {
 	fmt.Println(res.Request.URL, res.Status)
 }
 
-/*Mostra, com dia, data e hora, os logs dos sites solicitados*/
+/*  FAZ UMA REQUISIÇÃO HTTP PARA CADA SITE
+	JOGANDO A RESP E O POSSIVEL ERRO NA handleRequest.
+	SE TIVER RES, MOSTRA OS LOGS
+*/ 
 func initShowingLogs() {
 	fmt.Println("\nMostrando logs...")
-	for _, i := range sites {
-		res, err := http.Get(i)
-		res = handleRequest(res,err)
-		showLogs(res)
+	for i := 0; i < monitoramentos; i++ {
+		for _, i := range sites {
+			res, err := http.Get(i)
+			res = handleRequest(res,err)
+			showLogs(res)
+		}
 	}
 }
 
+/*  MOSTRA A URL E O STATUS DE CADA SITE MONITORADO */ 
 func showLogs(res *http.Response) {
 	fmt.Println(res.Request.URL, res.Status)
 }
