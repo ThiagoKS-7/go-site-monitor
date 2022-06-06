@@ -1,9 +1,12 @@
 package menu
 
 import (
+	"bufio"
 	"fmt"
+	"io"
 	"net/http"
 	"os"
+	"strings"
 	"time"
 )
 
@@ -53,6 +56,16 @@ func ChoseOption(opcao int) {
 */ 
 func initMonitoring() {
 	fmt.Println("\nMonitorando...")
+	fmt.Println("")
+	files := readFileLinks()
+	/*
+		Se retornar um arquivo, sites recebe ele,
+		senão, usa como padrão os descritos em sites.go
+	*/
+	if len(files) > 0 {
+		sites = files
+	}
+
 	for i := 0; i < monitoramentos; i++ {
 		for _, i := range sites {
 			res, err := http.Get(i)
@@ -62,13 +75,14 @@ func initMonitoring() {
 		time.Sleep(delay * time.Second)
 		fmt.Println("")
 	}
+	fmt.Println("\nFim do monitoramento!")
 }
 
 /*  VALIDA SE A ROTA NÃO RETORNOU ERRO */ 
 func handleRequest(res *http.Response,err error) *http.Response {
 	//Equivalência de try catch
 	if err != nil {
-		fmt.Println(err.Error())
+		fmt.Println("Erro:", err)
 	}
 	defer res.Body.Close()
 	return res
@@ -85,6 +99,15 @@ func doMonitoring(res *http.Response) {
 */ 
 func initShowingLogs() {
 	fmt.Println("\nMostrando logs...")
+	fmt.Println("")
+	files := readFileLinks()
+	/*
+		Se retornar um arquivo, sites recebe ele,
+		senão, usa como padrão os descritos em sites.go
+	*/
+	if len(files) > 0 {
+		sites = files
+	}
 	for i := 0; i < monitoramentos; i++ {
 		for _, i := range sites {
 			res, err := http.Get(i)
@@ -92,9 +115,35 @@ func initShowingLogs() {
 			showLogs(res)
 		}
 	}
+	fmt.Println("\nFim dos logs!")
 }
 
 /*  MOSTRA A URL E O STATUS DE CADA SITE MONITORADO */ 
 func showLogs(res *http.Response) {
 	fmt.Println(res.Request.URL, res.Status)
+}
+
+
+func readFileLinks() []string {
+	var sites []string
+	//file, err := ioutil.ReadFile("../sites.txt") // serve pra conseguir dar display de tudo
+	file, err := os.Open("../sites.txt")
+	if err != nil {
+		fmt.Println("Arquivo não encontrado: ", err)
+		fmt.Println("Usando sites default ao invés disso...")
+		fmt.Println("")
+	} else {
+		reader := bufio.NewReader(file)
+		/*Vai lendo a linha até achar o EOF*/
+		for {
+			line, err := reader.ReadString('\n') // byte usa aspa simples
+			line = strings.TrimSpace(line)
+			sites = append(sites, line)
+			if err == io.EOF {
+				break
+			}
+		}
+	}
+	file.Close()
+	return sites
 }
