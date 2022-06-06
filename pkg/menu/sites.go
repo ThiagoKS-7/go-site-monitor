@@ -8,6 +8,7 @@ var sites = []string {
 	"https://random-status-code.herokuapp.com",
 }
 
+var monitoramentos = len(sites)
+
 /*CONSTANTE*/
-const monitoramentos = 3
 const delay = 5
