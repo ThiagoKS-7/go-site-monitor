@@ -1,0 +1,75 @@
+[08/06/2022 02:25:32] - https://www.alura.com.br - status: 200 OK
+[08/06/2022 02:25:33] - https://www.youtube.com - status: 200 OK
+[08/06/2022 02:25:33] - https://www.google.com.br - status: 200 OK
+[08/06/2022 02:25:34] - https://random-status-code.herokuapp.com - status: 500 Internal Server Error
+[08/06/2022 02:25:35] - https://app.tradingworks.net/ - status: 200 OK
+
+[08/06/2022 02:25:35] - https://www.alura.com.br - status: 200 OK
+[08/06/2022 02:25:35] - https://www.youtube.com - status: 200 OK
+[08/06/2022 02:25:36] - https://www.google.com.br - status: 200 OK
+[08/06/2022 02:25:36] - https://random-status-code.herokuapp.com - status: 418 I'm a Teapot
+[08/06/2022 02:25:37] - https://app.tradingworks.net/ - status: 200 OK
+
+[08/06/2022 02:25:37] - https://www.alura.com.br - status: 200 OK
+[08/06/2022 02:25:37] - https://www.youtube.com - status: 200 OK
+[08/06/2022 02:25:37] - https://www.google.com.br - status: 200 OK
+[08/06/2022 02:25:38] - https://random-status-code.herokuapp.com - status: 403 Forbidden
+[08/06/2022 02:25:38] - https://app.tradingworks.net/ - status: 200 OK
+
+[08/06/2022 02:25:39] - https://www.alura.com.br - status: 200 OK
+[08/06/2022 02:25:39] - https://www.youtube.com - status: 200 OK
+[08/06/2022 02:25:39] - https://www.google.com.br - status: 200 OK
+[08/06/2022 02:25:40] - https://random-status-code.herokuapp.com - status: 200 OK
+[08/06/2022 02:25:40] - https://app.tradingworks.net/ - status: 200 OK
+
+[08/06/2022 02:30:31] - https://www.alura.com.br - status: 200 OK
+[08/06/2022 02:30:31] - https://www.youtube.com - status: 200 OK
+[08/06/2022 02:30:31] - https://www.google.com.br - status: 200 OK
+[08/06/2022 02:30:32] - https://random-status-code.herokuapp.com - status: 200 OK
+[08/06/2022 02:30:33] - https://app.tradingworks.net/ - status: 200 OK
+
+[08/06/2022 02:30:34] - https://www.alura.com.br - status: 200 OK
+[08/06/2022 02:30:34] - https://www.youtube.com - status: 200 OK
+[08/06/2022 02:30:34] - https://www.google.com.br - status: 200 OK
+[08/06/2022 02:30:35] - https://random-status-code.herokuapp.com - status: 404 Not Found
+[08/06/2022 02:30:35] - https://app.tradingworks.net/ - status: 200 OK
+
+[08/06/2022 02:30:35] - https://www.alura.com.br - status: 200 OK
+[08/06/2022 02:30:35] - https://www.youtube.com - status: 200 OK
+[08/06/2022 02:30:36] - https://www.google.com.br - status: 200 OK
+[08/06/2022 02:30:36] - https://random-status-code.herokuapp.com - status: 200 OK
+[08/06/2022 02:30:37] - https://app.tradingworks.net/ - status: 200 OK
+
+[08/06/2022 02:30:37] - https://www.alura.com.br - status: 200 OK
+[08/06/2022 02:30:37] - https://www.youtube.com - status: 200 OK
+[08/06/2022 02:30:37] - https://www.google.com.br - status: 200 OK
+[08/06/2022 02:30:38] - https://random-status-code.herokuapp.com - status: 200 OK
+[08/06/2022 02:30:38] - https://app.tradingworks.net/ - status: 200 OK
+
+[08/06/2022 02:32:58] - https://www.alura.com.br - status: 200 OK
+[08/06/2022 02:32:58] - https://www.youtube.com - status: 200 OK
+[08/06/2022 02:32:59] - https://www.google.com.br - status: 200 OK
+[08/06/2022 02:34:41] - https://www.alura.com.br - status: 200 OK
+[08/06/2022 02:34:41] - https://www.youtube.com - status: 200 OK
+[08/06/2022 02:34:41] - https://www.google.com.br - status: 200 OK
+[08/06/2022 02:34:42] - https://random-status-code.herokuapp.com - status: 200 OK
+[08/06/2022 02:34:43] - https://app.tradingworks.net/ - status: 200 OK
+
+[08/06/2022 02:34:43] - https://www.alura.com.br - status: 200 OK
+[08/06/2022 02:34:44] - https://www.youtube.com - status: 200 OK
+[08/06/2022 02:34:44] - https://www.google.com.br - status: 200 OK
+[08/06/2022 02:34:44] - https://random-status-code.herokuapp.com - status: 200 OK
+[08/06/2022 02:34:45] - https://app.tradingworks.net/ - status: 200 OK
+
+[08/06/2022 02:34:45] - https://www.alura.com.br - status: 200 OK
+[08/06/2022 02:34:45] - https://www.youtube.com - status: 200 OK
+[08/06/2022 02:34:45] - https://www.google.com.br - status: 200 OK
+[08/06/2022 02:34:46] - https://random-status-code.herokuapp.com - status: 418 I'm a Teapot
+[08/06/2022 02:34:46] - https://app.tradingworks.net/ - status: 200 OK
+
+[08/06/2022 02:34:46] - https://www.alura.com.br - status: 200 OK
+[08/06/2022 02:34:47] - https://www.youtube.com - status: 200 OK
+[08/06/2022 02:34:47] - https://www.google.com.br - status: 200 OK
+[08/06/2022 02:34:47] - https://random-status-code.herokuapp.com - status: 403 Forbidden
+[08/06/2022 02:34:48] - https://app.tradingworks.net/ - status: 200 OK
+
