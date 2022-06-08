@@ -1,6 +1,8 @@
 package menu
 
-/*DECLARAÇÃO DE UM SLICE GLOBAL*/
+/*
+* DECLARAÇÃO DE UM SLICE GLOBAL
+ */
 var sites = []string {
 	"https://www.alura.com.br",
 	"https://www.youtube.com",
@@ -9,6 +11,3 @@ var sites = []string {
 }
 
 var monitoramentos = len(sites)
-
-/*CONSTANTE*/
-const delay = 5

@@ -64,3 +64,28 @@
 	basicamente oq eu tinha usado (SÓ Q ELE NÃO OBRIGA PASSAR O TAMANHO): nomes := []string {1,2,3,4,5}
 	Quando é necessário colocar mais elementos do que sua capacidade atual, o slice dobra a capacidade.
 
+#ARQUIVOS
+
+	O DIRETÓRIO DO ARQUIVO LEVA EM CONSIDERAÇÃO O DIRETÓRIO DA MAIN, NÃO IMPORTA
+	EM QUAL ARQUIVO ELE ESTEJA SENDO CHAMADO PRA ABRIR
+
+	transformar em array:
+		reader := bufio.NewReader(file)
+			//Vai lendo a linha até achar o EOF
+			for {
+				line, err := reader.ReadString('\n') // byte usa aspa simples
+				line = strings.TrimSpace(line)
+				sites = append(sites, line)
+				if err == io.EOF {
+					break
+				}
+			}
+	
+	corginga pra podar criar, editar e adicionar no arquivo:
+		file, err := os.OpenFile("../logs.txt", os.O_RDWR | os.O_CREATE | os.O_APPEND, 0666)
+
+	pra escrever:
+		file.WriteString( "[" + time.Now().Format("02/01/2006 15:04:05") + "]"  + " - " + url + " - status: " + status + "\n")
+	
+	dar display de tudo:
+	file, err := ioutil.ReadFile("../sites.txt")

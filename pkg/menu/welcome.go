@@ -2,14 +2,24 @@ package menu
 
 import "fmt"
 
-/* EXEMPLO DE RETORNO DUPLO - RETORNA NOME E VERSÃO */
+/*
+	GetNameAndVersion()
+	* TRATA NOME E VERSÃO
+	@void
+	* retruns name string, version float32
+*/
 func GetNameAndVersion() (string, float32) {
 	name := "Thiago" // inferência na string
-	var version float32 = 0.6 // aqui é bom deixar, pq tem 2 tipos de float
+	var version float32 = 1.2 // aqui é bom deixar, pq tem 2 tipos de float
 	return name, version
 }
 
-/* MOSTRA NOME E CHAMA O MENU */
+/*
+	Welcome()
+	* MOSTRA O NOME, VERSÃO E CHAMA O MENU
+	@param name string
+	@param version float32
+*/
 func Welcome(name string, version float32) {
 	fmt.Println(
 		"Hello, Mr.",name + "!",
